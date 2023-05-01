@@ -41,3 +41,4 @@ Route::middleware([
 //             ............................. ROUTES ARE HERE..........................
 
 Route::get('/test',[HomeController::class,'test'])->name('test');
+Route::get('/',[HomeController::class,'index'])->name('home');
