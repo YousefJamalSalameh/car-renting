@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -42,3 +43,10 @@ Route::middleware([
 
 Route::get('/test',[HomeController::class,'test'])->name('test');
 Route::get('/',[HomeController::class,'index'])->name('home');
+
+
+
+
+//            .............................AdminPanel Routes..............................
+
+Route::get('/admin',[AdminHomeController::class,'index'])->name('admin');
