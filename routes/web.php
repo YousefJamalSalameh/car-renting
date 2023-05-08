@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
 
 
 /*
@@ -50,3 +51,15 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 //            .............................AdminPanel Routes..............................
 
 Route::get('/admin',[AdminHomeController::class,'index'])->name('admin');
+//            .............................Admin Category Routes..............................
+
+Route::get('/admin/category',[AdminCategoryController::class,'index'])->name('admin_category');
+Route::get('/admin/category/create',[AdminCategoryController::class,'create'])->name('admin_category_create');
+Route::post('/admin/category/store',[AdminCategoryController::class,'store'])->name('admin_category_store');
+Route::get('/admin/category/edit/{id}',[AdminCategoryController::class,'edit'])->name('admin_category_edit');
+Route::post('/admin/category/update/{id}',[AdminCategoryController::class,'update'])->name('admin_category_update');
+Route::get('/admin/category/show/{id}',[AdminCategoryController::class,'show'])->name('admin_category_show');
+Route::get('/admin/category/destroy/{id}',[AdminCategoryController::class,'destroy'])->name('admin_category_destroy');
+
+
+

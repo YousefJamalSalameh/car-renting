@@ -1,5 +1,5 @@
 <footer class="footer text-center">
-    All Rights Reserved by Matrix-admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
+     Designed and Developed by <p style="color: blue">Yousef,Muhanned and Usama</p>
 </footer>
 
    <script src="{{asset('assets')}}/admin/assets/libs/jquery/dist/jquery.min.js"></script>
