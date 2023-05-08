@@ -10,6 +10,7 @@
 
 
     <h1>Category List</h1>
+       <h3><a href="/admin/category/create"class="badge badge-pill badge-secondary" >Create New Category</a></h3>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title m-b-0">Product List</h5>
