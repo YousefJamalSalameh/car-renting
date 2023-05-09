@@ -12,7 +12,7 @@
             <h1>Edit {{$data->title}}</h1>
 
             <div class="card">
-                <form class="form-horizontal" action="/admin/category/update/{{$data->id}}" method="post">
+                <form class="form-horizontal" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post">
                     @csrf
                     <div class="card-body">
                         <h4 class="card-title">Category Elements</h4>

@@ -10,7 +10,7 @@
 
 
     <h1>Category List</h1>
-       <h3><a href="/admin/category/create"class="badge badge-pill badge-secondary" >Create New Category</a></h3>
+       <h3><a href="{{route('admin.category.create')}}"class="badge badge-pill badge-secondary" >Create New Category</a></h3>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title m-b-0">Product List</h5>
@@ -38,9 +38,9 @@
                     <td>{{$rs->description}}</td>
                     <td>{{$rs->iamge}}</td>
                     <td>{{$rs->status}}</td>
-                    <td><a href="/admin/category/edit/{{$rs->id}}"class="btn btn-success btn-sm">Edit</a></td>
-                    <td><a href="/admin/category/destroy/{{$rs->id}}"class="btn btn-danger btn-sm">Delete</a></td>
-                    <td><a href="/admin/category/show/{{$rs->id}}"class="btn btn-info btn-sm">Show</a></td>
+                    <td><a href="{{route('admin.category.edit',['id'=>$rs])}}"class="btn btn-success btn-sm">Edit</a></td>
+                    <td><a href="{{route('admin.category.destroy',['id'=>$rs])}}"class="btn btn-danger btn-sm">Delete</a></td>
+                    <td><a href="{{route('admin.category.show',['id'=>$rs])}}"class="btn btn-info btn-sm">Show</a></td>
 
                 </tr>
                 @endforeach
