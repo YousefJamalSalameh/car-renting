@@ -44,6 +44,7 @@ Route::middleware([
 
 Route::get('/test',[HomeController::class,'test'])->name('test');
 Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/about',[HomeController::class,'about'])->name('about');
 
 
 

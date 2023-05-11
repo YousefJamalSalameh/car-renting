@@ -51,34 +51,7 @@
     </div>
 </div>
 
-<div class="best-features">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>About Us</h2>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="left-content">
-                    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Explicabo, esse consequatur alias repellat in excepturi inventore ad <a href="#">asperiores</a> tempora ipsa. Accusantium tenetur voluptate labore aperiam molestiae rerum excepturi minus in pariatur praesentium, corporis, aliquid dicta.</p>
-                    <ul class="featured-list">
-                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                        <li><a href="#">Consectetur an adipisicing elit</a></li>
-                        <li><a href="#">It aquecorporis nulla aspernatur</a></li>
-                        <li><a href="#">Corporis, omnis doloremque</a></li>
-                    </ul>
-                    <a href="about-us.html" class="filled-button">Read More</a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="right-image">
-                    <img src="{{asset('assets')}}/images/about-1-570x350.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <div class="services" style="background-image: url(assets/images/other-image-fullscren-1-1920x900.jpg);" >
     <div class="container">
@@ -204,7 +177,31 @@
         </div>
     </div>
 </div>
+<div class="best-features">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>About Us</h2>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="left-content">
 
+                    <p style="font-size: 18px;"><span style=" font-weight: bold;font-size: 20px; color:blue" >Honesty and client satisfaction</span> what matter more to us.
+                    Care to know what's behind this company and the foundation of it? Click on the button bellow!</p>
+
+                    <a href="{{route('about')}}" class="filled-button">Read More..</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="right-image">
+                    <img src="{{asset('assets')}}/images/about-1-570x350.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="call-to-action">
     <div class="container">

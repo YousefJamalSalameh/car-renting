@@ -15,4 +15,10 @@ class HomeController extends Controller
     public function test(){
         echo "hello from test";
     }
+
+    public function about(){
+        return view('home.about');
+    }
 }
+
+
