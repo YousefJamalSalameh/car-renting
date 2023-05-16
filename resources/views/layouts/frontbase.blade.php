@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{asset('assets')}}/css/fontawesome.css">
     <link rel="stylesheet" href="{{asset('assets')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('assets')}}/css/owl.css">
-   @yield("head")
+    @yield("head")
 </head>
 <body>
 

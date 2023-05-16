@@ -52,10 +52,10 @@ class  CategoryController extends Controller
     public function show(Category $category,$id)
     {
         //
-       $data=category::find($id);
-       return view('admin.category.show',[
-           'data'=>$data
-       ]);
+        $data=category::find($id);
+        return view('admin.category.show',[
+            'data'=>$data
+        ]);
 
     }
 

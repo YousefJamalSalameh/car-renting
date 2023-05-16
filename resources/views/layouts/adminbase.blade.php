@@ -34,7 +34,7 @@
 </div>
 <div id="main-wrapper">
 
-@include('admin.header')
+    @include('admin.header')
 
 
 
@@ -42,7 +42,7 @@
         @include('admin.sidebar')
     @show
 
-@yield('content')
+    @yield('content')
 
     @include('admin.footer')
     @yield('foot')
