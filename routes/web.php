@@ -45,6 +45,10 @@ Route::middleware([
 Route::get('/test',[HomeController::class,'test'])->name('test');
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
+Route::get('/login',[\App\Http\Controllers\UserController::class,'loginview'])->name('loginview');
+Route::post('/login',[\App\Http\Controllers\UserController::class,'login'])->name('login');
+Route::get('/register',[\App\Http\Controllers\UserController::class,'registerview'])->name('registerview');
+Route::post('/register',[\App\Http\Controllers\UserController::class,'register'])->name('register');
 
 
 

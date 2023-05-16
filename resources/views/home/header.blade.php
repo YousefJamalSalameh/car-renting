@@ -28,9 +28,20 @@
                         </div>
                     </li>
 
+
                     <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
 
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">User</a>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{route('loginview')}}">Login</a>
+                            <a class="dropdown-item" href="{{route('registerview')}}">Register</a>
+
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
