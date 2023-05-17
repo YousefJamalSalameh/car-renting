@@ -6,6 +6,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
+use App\Http\Controllers\AdminPanel\ProductsController as AdminProductsController;
 
 
 /*
@@ -50,6 +51,10 @@ Route::post('/login',[\App\Http\Controllers\UserController::class,'login'])->nam
 Route::get('/register',[\App\Http\Controllers\UserController::class,'registerview'])->name('registerview');
 Route::post('/register',[\App\Http\Controllers\UserController::class,'register'])->name('register');
 
+// new route
+Route::get('/products',[HomeController::class,'products'])->name('products');
+
+
 
 
 
@@ -59,6 +64,18 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/',[AdminHomeController::class,'index'])->name('index');
 //            .............................Admin Category Routes..............................
     Route::prefix('category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
+        Route::get('/','index')->name('index');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/show/{id}','show')->name('show');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+
+    });
+
+
+    Route::prefix('products')->name('products.')->controller(AdminProductsController::class)->group(function () {
         Route::get('/','index')->name('index');
         Route::get('/create','create')->name('create');
         Route::post('/store','store')->name('store');
