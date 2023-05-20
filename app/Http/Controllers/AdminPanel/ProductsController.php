@@ -14,10 +14,10 @@ class ProductsController extends Controller
     public function index()
     {
 
-       $data = Products::all();
-            return view('admin.products.index',[
-                'data'=>$data
-            ]);
+        $data = Products::all();
+        return view('admin.products.index',[
+            'data'=>$data
+        ]);
     }
 
     public function create()
@@ -50,4 +50,13 @@ class ProductsController extends Controller
         return view ('admin.create', compact ('product', 'category'));
     }
 
+    public function info(Products $products,$id)
+    {
+        //
+        $data=products::find($id);
+        return view('admin.products.show',[
+            'data'=>$data
+        ]);
+
+    }
 }

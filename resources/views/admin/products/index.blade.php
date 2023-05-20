@@ -38,9 +38,9 @@
                              <td>{{$rs->detail}}</td>
                             <td>{{$rs->price}}</td>
                             <td>{{$rs->status}}</td>
-                            <td><a href="{{route('admin.category.edit',['id'=>$rs])}}"class="btn btn-success btn-sm">Edit</a></td>
-                            <td><a href="{{route('admin.category.destroy',['id'=>$rs])}}"class="btn btn-danger btn-sm">Delete</a></td>
-                            <td><a href="{{route('admin.category.show',['id'=>$rs])}}"class="btn btn-info btn-sm">Show</a></td>
+                            <td><a href="{{route('admin.products.edit',['id'=>$rs])}}"class="btn btn-success btn-sm">Edit</a></td>
+                            <td><a href="{{route('admin.products.destroy',['id'=>$rs])}}"class="btn btn-danger btn-sm">Delete</a></td>
+                            <td><a href="{{route('admin.products.info',['id'=>$rs])}}"class="btn btn-info btn-sm">Show</a></td>
 
                         </tr>
                     @endforeach
