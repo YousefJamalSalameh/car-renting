@@ -17,7 +17,7 @@
                     <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Category Id</th>
+                        <th scope="col">Category Name</th>
                         <th scope="col">Title</th>
                         <th scope="col">Keywords</th>
                         <th scope="col">detail</th>
@@ -32,7 +32,7 @@
                     @foreach($data as $rs)
                         <tr>
                             <th scope="row">{{$rs->id}}</th>
-                            <th scope="row">{{$rs->CategoryId}}</th>
+                            <th scope="row">{{$rs->Category_Name}}</th>
                             <td>{{$rs->title}}</td>
                             <td>{{$rs->keywords}}</td>
                              <td>{{$rs->detail}}</td>
