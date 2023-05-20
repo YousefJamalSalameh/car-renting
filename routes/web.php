@@ -74,6 +74,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     });
 
+    // Products section
 
     Route::prefix('products')->name('products.')->controller(AdminProductsController::class)->group(function () {
         Route::get('/','index')->name('index');

@@ -7,8 +7,6 @@
     @include("admin.sidebar")
     <div class="page-wrapper">
         <div class="container-fluid">
-
-
             <h1>Product List</h1>
             <h3><a href="{{route('admin.products.create')}}"class="badge badge-pill badge-secondary" >Add New Products</a></h3>
             <div class="card">
@@ -19,10 +17,11 @@
                     <thead>
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Category Id</th>
                         <th scope="col">Title</th>
                         <th scope="col">Keywords</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Image</th>
+                        <th scope="col">detail</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Status</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
@@ -33,10 +32,11 @@
                     @foreach($data as $rs)
                         <tr>
                             <th scope="row">{{$rs->id}}</th>
+                            <th scope="row">{{$rs->CategoryId}}</th>
                             <td>{{$rs->title}}</td>
                             <td>{{$rs->keywords}}</td>
-                            <td>{{$rs->description}}</td>
-                            <td>{{$rs->iamge}}</td>
+                             <td>{{$rs->detail}}</td>
+                            <td>{{$rs->price}}</td>
                             <td>{{$rs->status}}</td>
                             <td><a href="{{route('admin.category.edit',['id'=>$rs])}}"class="btn btn-success btn-sm">Edit</a></td>
                             <td><a href="{{route('admin.category.destroy',['id'=>$rs])}}"class="btn btn-danger btn-sm">Delete</a></td>
