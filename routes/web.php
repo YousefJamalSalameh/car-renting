@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use Illuminate\Foundation\Application;
@@ -74,7 +75,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     });
 
-    // Product section
+    //            .............................Admin Product Routes..............................
 
     Route::prefix('product')->name('product.')->controller(AdminProductsController::class)->group(function () {
         Route::get('/','index')->name('index');
@@ -84,6 +85,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/update/{id}','update')->name('update');
         Route::get('/show/{id}','show')->name('show');
         Route::get('/destroy/{id}','destroy')->name('destroy');
+
+    });
+
+    //            .............................Admin Image Routes..............................
+    Route::prefix('image')->name('image.')->controller(ImageController::class)->group(function () {
+        Route::get('/{pid}','index')->name('index');
+        Route::post('/store/{pid}','store')->name('store');
+        Route::get('/destroy/{pid}/{id}','destroy')->name('destroy');
 
     });
 });

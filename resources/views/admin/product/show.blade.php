@@ -26,6 +26,7 @@
                         <th scope="col">Price</th>
                         <th scope="col">Description</th>
                         <th scope="col">image</th>
+                        <th scope="col">Gallery</th>
                         <th scope="col">Status</th>
                         <th scope="col">Created at</th>
                         <th scope="col">Updated at</th>
@@ -41,6 +42,10 @@
                         <td>{{$data->price}}</td>
                         <td>{{$data->description}}</td>
                         <td><img src="{{Storage::url($data->image)}}" style="height: 80px" alt=""></td>
+                        <td><a href="{{route('admin.image.index',['pid'=>$data->id])}}">
+                                <i class="m-r-10 mdi mdi-folder-multiple-image" ></i>
+                            </a>
+                        </td>
                         <td>{{$data->status}}</td>
                         <td>{{$data->created_at}}</td>
                         <td>{{$data->updated_at}}</td>
@@ -48,16 +53,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
-
-
-
-
-
-
-
-
     </div>
-
 @endsection

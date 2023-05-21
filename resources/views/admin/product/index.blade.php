@@ -24,6 +24,7 @@
                         <th scope="col">detail</th>
                         <th scope="col">Price</th>
                         <th scope="col">Image</th>
+                        <th scope="col" >Gallery</th>
                         <th scope="col">Status</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
@@ -41,6 +42,10 @@
                             <td>{{$rs->detail}}</td>
                             <td>{{$rs->price}}</td>
                             <td> <img src="{{Storage::url($rs->image)}}" style="height: 80px" alt=""></td>
+                            <td><a href="{{route('admin.image.index',['pid'=>$rs->id])}}">
+                                    <i class="m-r-10 mdi mdi-folder-multiple-image" ></i>
+                                </a>
+                            </td>
                             <td>{{$rs->status}}</td>
                             <td><a href="{{route('admin.product.edit',['id'=>$rs])}}"class="btn btn-success btn-sm">Edit</a></td>
                             <td><a href="{{route('admin.product.destroy',['id'=>$rs])}}"class="btn btn-danger btn-sm">Delete</a></td>
