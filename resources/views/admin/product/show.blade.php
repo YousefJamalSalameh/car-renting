@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title', 'show Products:{{$data->title}}')
+@section('title', 'show Product:      '.   $data->title)
 
 @section('content')
 
@@ -34,13 +34,13 @@
                     <tbody>
                     <tr>
                         <th scope="row">{{$data->id}}</th>
-                        <th scope="row">{{$data->Category_Name}}</th>
+                        <th scope="row">{{$data->CategoryId}}</th>
                         <td>{{$data->title}}</td>
                         <td>{{$data->keywords}}</td>
                         <td>{{$data->detail}}</td>
                         <td>{{$data->price}}</td>
                         <td>{{$data->description}}</td>
-                        <td>{{$data->image}}</td>
+                        <td><img src="{{Storage::url($data->image)}}" style="height: 80px" alt=""></td>
                         <td>{{$data->status}}</td>
                         <td>{{$data->created_at}}</td>
                         <td>{{$data->updated_at}}</td>

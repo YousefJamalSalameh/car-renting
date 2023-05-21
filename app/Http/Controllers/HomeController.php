@@ -14,15 +14,11 @@ class HomeController extends Controller
         return view('home.index');
     }
 
-    public function test(){
-        echo "hello from test";
-    }
-
     public function about(){
         return view('home.about');
     }
     public function products(){
-        return view('home.products');
+        return view('home.product');
     }
 }
 

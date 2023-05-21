@@ -12,7 +12,7 @@
             <h1>Add Category</h1>
 
             <div class="card">
-                <form class="form-horizontal" action="{{route('admin.category.store')}}" method="post">
+                <form class="form-horizontal" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <h4 class="card-title">Category Elements</h4>

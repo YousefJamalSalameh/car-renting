@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title', 'show Category:{{$data->title}}')
+@section('title', 'show Category: '. $data->title)
 
 @section('content')
 
@@ -35,7 +35,9 @@
                         <td>{{$data->title}}</td>
                         <td>{{$data->keywords}}</td>
                         <td>{{$data->description}}</td>
-                        <td>{{$data->image}}</td>
+                        <td>
+                            <img src="{{Storage::url($data->image)}}" style="height: 80px" alt="">
+                            </td>
                         <td>{{$data->status}}</td>
                         <td>{{$data->created_at}}</td>
                         <td>{{$data->updated_at}}</td>

@@ -3,109 +3,103 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-class  CategoryController extends Controller
+class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    //
     public function index()
     {
-        //
-        $data=Category::all();
-        return view('admin.category.index',[
+
+        $data = Product::all();
+        return view('admin.product.index',[
             'data'=>$data
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
-        return view('admin.category.create');
+        $category = Category::all();
+        return view('admin.product.create',[
+            'category'=>$category
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         //
-        $data=new Category();
-        $data->parent_id = 0;
+        $data=new Product();
+        $data->CategoryId = $request->CategoryId;
+        $data->userId=0;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
+        $data->detail = $request->detail;
         $data->description = $request->description;
+        $data->price = $request->price;
         if($request->file('image')){
             $data->image=$request->file('image')->store('image');
         }
         $data->status = $request->status;
         $data->save();
-        return redirect('admin/category');
+        return redirect('admin/product');
 
     }
-
-    /**
-     * Display the specified resource.
-     */
     public function show($id)
     {
         //
-        $data=category::find($id);
-        return view('admin.category.show',[
+        $data=Product::find($id);
+        return view('admin.product.show',[
             'data'=>$data
         ]);
 
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-
-
     public function edit($id)
     {
         //
-        $data=Category::find($id);
-        return view('admin/category/edit',[
-            'data' => $data
+        $data=Product::find($id);
+        $datalist=Category::all();
+        return view('admin/product/edit',[
+            'data' => $data,
+            'datalist'=>$datalist
         ]);
     }
 
+
     /**
      * Update the specified resource in storage.
+     * @param \App\Models\Product $product
      */
-    public function update(Request $request, Category $category,$id)
+    public function update(Request $request, Product $product,$id)
     {
         //
-        $data= Category::find($id);
-        $data->parent_id = 0;
+        $data= Product::find($id);
+        $data->userId=0;
+        $data->CategoryId = $request->CategoryId;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
+        $data->detail = $request->detail;
         $data->description = $request->description;
+        $data->price = $request->price;
         if($request->file('image')){
             $data->image=$request->file('image')->store('image');
         }
         $data->status = $request->status;
         $data->save();
-        return redirect('admin/category');
+        return redirect('admin/product');
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Category $category,$id)
+    public function destroy(Product $product,$id)
     {
         //
-        $data = Category::find($id);
+        $data = Product::find($id);
         Storage::delete($data->image);
         $data->delete();
-        return redirect('admin/category');
+        return redirect('admin/product');
     }
 }

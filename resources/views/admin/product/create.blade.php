@@ -13,14 +13,14 @@
             <h1>Add Product</h1>
 
             <div class="card">
-                <form class="form-horizontal" action="{{route('admin.products.store')}}" method="post">
+                <form class="form-horizontal" action="{{route('admin.product.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <h4 class="card-title">Product Elements</h4>
                         <div class="form-group row" >
                             <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Category Type</label>
                             <div class="col-md-9" data-select2-id="11">
-                                <select name="Category_Name" class="select2 form-control custom-select select2-hidden-accessible"  style="width: 100%; height:36px;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                <select name="CategoryId" class="select2 form-control custom-select select2-hidden-accessible"  style="width: 100%; height:36px;" data-select2-id="1" tabindex="-1" aria-hidden="true">
                                     <option data-select2-id="3">Select</option>
                                     @foreach($category as $rs)
                                         <option value="{{$rs->title}}" data-select2-id="20">{{$rs->title}}</option>

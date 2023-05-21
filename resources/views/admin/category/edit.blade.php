@@ -12,7 +12,7 @@
             <h1>Edit {{$data->title}}</h1>
 
             <div class="card">
-                <form class="form-horizontal" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post">
+                <form class="form-horizontal" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <h4 class="card-title">Category Elements</h4>
@@ -64,15 +64,15 @@
                                 </select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" data-select2-id="2" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-vump-container"><span class="select2-selection__rendered" id="select2-vump-container" role="textbox" aria-readonly="true" title="Select"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                             </div>
                         </div>
-
-
                     </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="border-top">
-                <div class="card-body">
-                    <button type="submit" class="btn btn-primary">Update</button>
-                </div>
-            </div>
+
 
         </div>
 
