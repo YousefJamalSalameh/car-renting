@@ -52,7 +52,7 @@ Route::get('/register',[\App\Http\Controllers\UserController::class,'registervie
 Route::post('/register',[\App\Http\Controllers\UserController::class,'register'])->name('register');
 
 // new route
-Route::get('/product',[HomeController::class,'products'])->name('product');
+Route::get('/products',[HomeController::class,'products'])->name('products');
 
 
 
