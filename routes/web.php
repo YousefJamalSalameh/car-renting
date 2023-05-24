@@ -54,6 +54,7 @@ Route::post('/register',[\App\Http\Controllers\UserController::class,'register']
 
 // new route
 Route::get('/products',[HomeController::class,'products'])->name('products');
+Route::get('/detail/{pid}',[HomeController::class,'detail'])->name('detail');
 
 
 
