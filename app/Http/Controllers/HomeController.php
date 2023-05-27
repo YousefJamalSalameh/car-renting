@@ -42,6 +42,27 @@ class HomeController extends Controller
         ]);
     }
 
+
+
+    public function searched(Request $request)
+    {
+        if ($request->search) {
+            $searchQuery = $request->input('search');
+            $searchedP = Product::where('keywords', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('title', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('description', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('detail', 'LIKE', '%' . $request->search . '%')
+                ->get();
+            return view('home.searched', [
+                'searchedP' => $searchedP,
+                'searchQuery' => $searchQuery
+            ]);
+        }
+        else{
+            return redirect()->back();
+        }
+    }
+
 }
 
 

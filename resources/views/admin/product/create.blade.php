@@ -39,7 +39,7 @@
                         <div class="form-group row">
                             <label for="keywords" class="col-sm-3 text-right control-label col-form-label">Keywords</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="keywords"  placeholder="Keywoeds">
+                                <input type="text" class="form-control" name="keywords"  placeholder="Keywords">
                             </div>
                         </div>
                         <div class="form-group row">
