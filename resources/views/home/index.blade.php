@@ -1,6 +1,6 @@
 @extends('layouts.frontbase')
 
-@section('title', 'YOUR GARAGE || Car renting')
+@section('title', 'SpeedyRent || Car renting website')
 
 @section('content')
 

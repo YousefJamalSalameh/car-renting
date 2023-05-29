@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
-                        <h4>Your Garage</h4>
+                        <h4>Speedy-Rent</h4>
                         <h2>Products</h2>
                     </div>
                 </div>

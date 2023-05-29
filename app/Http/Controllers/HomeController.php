@@ -12,7 +12,7 @@ class HomeController extends Controller
 
 
     public function index(){
-         $data=Product::limit(3)->get();
+         $data=Product::limit(3)->latest()->get();
 
         return view('home.index',[
 
@@ -61,6 +61,11 @@ class HomeController extends Controller
         else{
             return redirect()->back();
         }
+    }
+
+    public function contact(){
+
+        return view('home.contact');
     }
 
 }
